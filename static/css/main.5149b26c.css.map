@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.5149b26c.css","mappings":"AAAA,KACE,wBAAyB,CACzB,aACF,CACA,KACE,iBACF,CACA,GACE,mCACF","sources":["components/App/App.css"],"sourcesContent":["body {\n  background-color: #daf6e7;\n  color: #162447;\n}\n.app {\n  text-align: center;\n}\nh1 {\n  font-family: \"Press Start 2P\", cursive;\n}\n"],"names":[],"sourceRoot":""}
