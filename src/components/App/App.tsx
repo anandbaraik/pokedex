@@ -56,13 +56,21 @@ class App extends Component<any, AppState> {
         searchedPokemons: patchedPokemons,
     });
   }
+
+  handleClick = (pokemonName:string) => {
+    const {searchedPokemons} = this.state;
+    const selectedPokemon = searchedPokemons.find((pokemon:PokemonSchema) => pokemon.name === pokemonName);
+    this.setState({selectedPokemon});
+  }
+
   render() {
     return (
       <div className='app'>
         <h1>Pokedex</h1>
         <Pokedex
-           pokemons={this.state.searchedPokemons}
+          pokemons={this.state.searchedPokemons}
           selectedPokemon={this.state.selectedPokemon}
+          onPokemonClick={this.handleClick}
           />
       </div>
     )

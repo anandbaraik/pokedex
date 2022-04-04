@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Pokecard.css"
 interface PokecardProps{
-  name:string|undefined;
-  spriteurl?:string
+  name:string;
+  spriteurl?:string;
+  onPokemonClick:(pokemonName:string) => void;
 }
-const Pokecard = ({name, spriteurl}:PokecardProps) => {
+const Pokecard = ({name, spriteurl, onPokemonClick}:PokecardProps) => {
   return (
-    <div className='pokecard'>
+    <div className='pokecard' onClick={() => onPokemonClick(name)}>
         <img src={spriteurl} alt="Pokemon" className='pokemon'/>
         <p>
           {name}
