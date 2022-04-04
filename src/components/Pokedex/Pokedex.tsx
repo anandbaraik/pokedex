@@ -9,6 +9,7 @@ interface PokedexPops{
   selectedPokemon: PokemonSchema | undefined;
 }
 export default function Pokedex({pokemons, selectedPokemon}:PokedexPops) {
+  console.log(pokemons);
   return (
     <div className='pokedex-container'>
       <div className='pokelist-container'>
@@ -16,7 +17,7 @@ export default function Pokedex({pokemons, selectedPokemon}:PokedexPops) {
       <Pokelist pokemons={pokemons}/>
       </div>
       <div className='pokedex-search-result-container'>
-        <PokeSearchResult/>
+        <PokeSearchResult selectedPokemon={selectedPokemon}/>
       </div>
     </div>
   )

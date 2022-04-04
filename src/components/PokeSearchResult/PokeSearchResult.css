@@ -13,3 +13,9 @@
   font-family: "Press Start 2P", cursive;
   line-height: 1.5;
 }
+.pokemon-animated-sprite{
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  padding: 10px;
+}
