@@ -60,7 +60,10 @@ class App extends Component<any, AppState> {
     return (
       <div className='app'>
         <h1>Pokedex</h1>
-        <Pokedex/>
+        <Pokedex
+           pokemons={this.state.searchedPokemons}
+          selectedPokemon={this.state.selectedPokemon}
+          />
       </div>
     )
   }
