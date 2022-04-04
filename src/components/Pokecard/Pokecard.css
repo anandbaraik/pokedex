@@ -14,7 +14,7 @@
     flex-grow: 1;
 }
 .pokecard:hover{
-    transform: scale(1.05)
+    transform: scale(1.03)
 }
 .pokemon{
     width: 85px;

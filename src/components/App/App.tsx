@@ -63,6 +63,16 @@ class App extends Component<any, AppState> {
     this.setState({selectedPokemon});
   }
 
+  handleInputChange = (inputValue:string) => {
+    const {allPokemons} = this.state;
+    const searchedPokemons = allPokemons.filter((pokemon:PokemonSchema) => {
+      return pokemon.name && 
+          pokemon.name.toLocaleLowerCase()
+          .includes(inputValue.toLocaleLowerCase());
+    });
+    this.setState({searchedPokemons});
+  }
+
   render() {
     return (
       <div className='app'>
@@ -71,6 +81,7 @@ class App extends Component<any, AppState> {
           pokemons={this.state.searchedPokemons}
           selectedPokemon={this.state.selectedPokemon}
           onPokemonClick={this.handleClick}
+          onInputChange={this.handleInputChange}
           />
       </div>
     )
