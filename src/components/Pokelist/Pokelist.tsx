@@ -11,16 +11,21 @@ const Pokelist = ({pokemons, onPokemonClick}:PokelistProps) => {
   return (
     <div className='pokelist'>
       {
-        pokemons.map((pokemon) => {
-          return (
-            pokemon.name &&
-            <Pokecard
-              onPokemonClick={onPokemonClick}
-              key={pokemon.id}
-              name={pokemon.name}
-              spriteurl={pokemon.sprites.normal}/>
-          );
-        })
+        pokemons.length ? 
+          pokemons.map((pokemon) => {
+            return (
+              pokemon.name &&
+              <Pokecard
+                onPokemonClick={onPokemonClick}
+                key={pokemon.id}
+                name={pokemon.name}
+                spriteurl={pokemon.sprites.normal}/>
+            );
+          })
+          :
+          (
+            <h2 className='no-pokemon'>No pokemon found!</h2>
+          )
       }
     </div>
   )
